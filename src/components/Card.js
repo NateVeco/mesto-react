@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Card({link, name, clickOnCard}) {
+function Card({link, name, likes, clickOnCard}) {
 
     function handleCardClick() {
         clickOnCard({link, name})
@@ -13,7 +13,7 @@ function Card({link, name, clickOnCard}) {
                 <h2 className="element__title">{name}</h2>
           <div className="element__like-container">
             <button type="button" className="element__like-button"></button>
-            <p className="element__like-number"></p>
+            <p className="element__like-number">{likes.length}</p>
           </div>
         </div>
         <button type="button" className="trash-button button"></button>

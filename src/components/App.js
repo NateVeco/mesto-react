@@ -59,7 +59,6 @@ function App() {
           isOpen={isEditProfilePopupOpen}
           onClose={closeAllPopups}>
           
-      <div className="popup__content">
           <input
             type="text"
             placeholder="Имя"
@@ -82,7 +81,6 @@ function App() {
             required
           />
           <span className="input-bio-error popup__error"></span>
-          </div>
           
     </PopupWithForm>
 
@@ -95,7 +93,6 @@ function App() {
           isOpen={isAddPlacePopupOpen}
           onClose={closeAllPopups}>
           
-      <div className="popup__content">
           <input
             type="text"
             placeholder="Название"
@@ -116,7 +113,6 @@ function App() {
             required
           />
           <span className="link-element-error popup__error"></span>
-          </div>
           
     </PopupWithForm>
     
@@ -145,7 +141,6 @@ function App() {
           isOpen={isEditAvatarPopupOpen}
           onClose={closeAllPopups}>
 
-        <div className="popup__content">
           <input
             type="url"
             placeholder="Ссылка на картинку"
@@ -155,7 +150,6 @@ function App() {
             required
           />
           <span className="link-avatar-error link-element-error popup__error"></span>
-          </div>
           
         </PopupWithForm>
   

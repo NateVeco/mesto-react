@@ -33,7 +33,7 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, clickOnCard }) {
 
 
   return (
-    <>
+    
       <main className="content">
         
       <section className="profile">
@@ -57,19 +57,19 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, clickOnCard }) {
 
       <section className="elements">
         <ul className="elements__table">
-          {cards.map((item) => {
-            return (
-              <Card
-                key={item._id}
-                link={item.link}
-                name={item.name}
-              clickOnCard={clickOnCard} />
-            )
-          })}
+            {cards.map((item) => {
+              return (
+                <Card
+                  key={item._id}
+                  link={item.link}
+                  name={item.name}
+                  likes={item.likes}
+                  clickOnCard={clickOnCard} />
+              )
+            })}
         </ul>
       </section>
       </main>
-      </>
       );
 }
 
