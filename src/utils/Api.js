@@ -38,7 +38,7 @@ export class Api {
                 headers: this._headers,
                 body: JSON.stringify({
                     name: item.name,
-                    about: item.bio
+                    about: item.about
                 })
             })
             .then(this._getResponse);
@@ -75,21 +75,14 @@ export class Api {
             .then(this._getResponse);
     };
 
-    getLike(ownerCard) {
+    getLike(ownerCard, isLiked) {
         return fetch(`${this._url}/cards/${ownerCard}/likes`, {
-                method: 'PUT',
+                method: `${isLiked ? 'PUT' : 'DELETE'}`,
                 headers: this._headers
             })
             .then(this._getResponse);
     };
 
-    deleteLike(ownerCard) {
-        return fetch(`${this._url}/cards/${ownerCard}/likes`, {
-                method: 'DELETE',
-                headers: this._headers
-            })
-            .then(this._getResponse);
-    }
 }
 
 const api = new Api ('https://mesto.nomoreparties.co/v1/cohort-44');

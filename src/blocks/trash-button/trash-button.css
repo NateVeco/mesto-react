@@ -11,4 +11,5 @@
   background-size: 18px 19px;
   cursor: pointer;
   background-color: transparent;
+  visibility: hidden;
 }
